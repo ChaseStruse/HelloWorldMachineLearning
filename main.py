@@ -1,3 +1,5 @@
+#Guide from : https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
@@ -29,5 +31,12 @@ print(dataset.describe())
 print(' ')
 print(dataset.groupby('class').size())
 
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+pyplot.show()
 
+dataset.hist()
+pyplot.show()
+
+scatter_matrix(dataset)
+pyplot.show()
 
